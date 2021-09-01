@@ -6,7 +6,7 @@ LiquidCrystal_I2C lcd(0x3F, 16, 4);
 // variables de botones
 char tecla;
 char clave[5];
-char claveMaestra[5] = "5555";          // Set contraseña
+char claveMaestra[5] = "5555"; // Set contraseña
 byte indice = 0;
 int menu = 0;
 int ledRojo = 6;
@@ -41,7 +41,7 @@ void setup()
   lcd.setCursor(0, 2); // imprime clave en display
   lcd.print("ERDGE");
   displayCodigoEntrada(); // pantalla entrada
-   updateMenu();                                   // inicia menu
+  updateMenu();           // inicia menu
 }
 
 void loop()
@@ -56,14 +56,15 @@ void loop()
     lcd.setCursor(indice, 2); // imprime clave en display
     lcd.print(tecla);
   }
-   if (!digitalRead(tecla)) {               // manejo menu
-  menu == tecla;
-   updateMenu();
-   }
+  if (!digitalRead(tecla))
+  { // manejo menu
+    menu == tecla;
+    updateMenu();
+  }
   if (indice == 4)
-  {                                  // tope de input
+  { // tope de input
     if (!strcmp(clave, claveMaestra))
-    {                               //compara clave ingresada con clave maestra
+    { //compara clave ingresada con clave maestra
       Serial.println("correcta");
       displayCorrecto();            // devuelve display correcto
       digitalWrite(ledVerde, HIGH); //  enciende LED de verificacion correcto
@@ -74,7 +75,7 @@ void loop()
       indice = 0;                   //
     }
     else
-    {                                     // devuelve display incorrecto
+    { // devuelve display incorrecto
       Serial.println("incorrecta");
       displayIncorrecto();
       digitalWrite(ledRojo, HIGH);
@@ -91,7 +92,7 @@ void loop()
 void displayCodigoEntrada()
 {
   lcd.clear();
-  lcd.setCursor(0, 0);                         // display pagina entrada
+  lcd.setCursor(0, 0); // display pagina entrada
   lcd.print("Introduzca clave");
   lcd.setCursor(0, 1);
   lcd.print("Clave: ****");
@@ -99,7 +100,7 @@ void displayCodigoEntrada()
 void displayCorrecto()
 {
   lcd.clear();
-  lcd.setCursor(0, 0);                            // display contraseña correcta
+  lcd.setCursor(0, 0); // display contraseña correcta
   lcd.print("****************");
   lcd.setCursor(0, 1);
   lcd.print("    Correcto!   ");
@@ -113,7 +114,7 @@ void displayIncorrecto()
   lcd.clear();
   lcd.setCursor(0, 0);
   lcd.print("----------------");
-  lcd.setCursor(0, 1);                             // display contraseña incorrecta
+  lcd.setCursor(0, 1); // display contraseña incorrecta
   lcd.print("   Incorrecto!  ");
   lcd.setCursor(0, 2);
   lcd.print("Codigo Invalido!");
