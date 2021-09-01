@@ -12,7 +12,7 @@ Lista de libreria
 #include <Wire.h> 
 
 Display access Denagade
-<img src="https://raw.githubusercontent.com/davidciliberto1/KeypadController/main/images/keypad1.jpeg" style="width:100px;">
+<img src="https://raw.githubusercontent.com/davidciliberto1/KeypadController/main/images/keypad1.jpeg" width="200">
 
 Display access Approved
-<img src="https://raw.githubusercontent.com/davidciliberto1/KeypadController/main/images/keypad2.jpeg" style="width:100px;">
+<img src="https://raw.githubusercontent.com/davidciliberto1/KeypadController/main/images/keypad2.jpeg" width="200">
