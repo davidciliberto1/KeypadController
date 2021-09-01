@@ -11,5 +11,8 @@ Lista de libreria
 #include <Keypad.h>
 #include <Wire.h> 
 
-<img src="https://raw.githubusercontent.com/davidciliberto1/KeypadController/main/images/keypad1.jpeg" style="width:300px;">
-<img src="https://raw.githubusercontent.com/davidciliberto1/KeypadController/main/images/keypad2.jpeg" style="width:300px;">
+Display access Denagade
+<img src="https://raw.githubusercontent.com/davidciliberto1/KeypadController/main/images/keypad1.jpeg" style="width:100px;">
+
+Display access Approved
+<img src="https://raw.githubusercontent.com/davidciliberto1/KeypadController/main/images/keypad2.jpeg" style="width:100px;">
