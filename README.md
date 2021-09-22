@@ -2,11 +2,15 @@
 
 Description: Security Gate/Door controller with programmable password, LCD screen, 10A opening relay, sound and light.
 By pressing the password in the Num keypad of the device, it checks and responds with the light, sound and screen display, if the password is approved, activates a 10A relay connected to the security device, motor or lock.
-### "inserte diseño de conexion de componentes y modulos" 
 
-libraries
+Libraries
+
+you need to install this libraries in the top of the code
+
 #include <LiquidCrystal_I2C.h>
+
 #include <Keypad.h>
+
 #include <Wire.h> 
 
 ## Display access Denied
